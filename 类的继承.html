@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor() {
+
+            }
+            money() {
+                console.log(1000);
+            }
+        }
+        class Son extends Father {}
+        // extends 继承父级元素的属性和方法
+        var son = new Son();
+        son.money();
+        class Father2 {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+        }
+        class Son2 extends Father2 {
+            constructor(x, y) {
+                super(x, y); //调用父级元素的构造函数
+            }
+        }
+        var son2 = new Son2(1, 2);
+        var son3 = new Son2(11, 22);
+        son2.sum()
+        son3.sum()
+    </script>
+</body>
+
+</html>
